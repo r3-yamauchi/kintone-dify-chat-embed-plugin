@@ -1,0 +1,35 @@
+{
+  "manifest_version": 1,
+  "version": 1,
+  "type": "APP",
+  "desktop": {
+    "js": [
+      "js/desktop.js"
+    ],
+    "css": []
+  },
+  "icon": "image/icon.png",
+  "config": {
+    "html": "html/config.html",
+    "js": [
+      "js/config.js"
+    ],
+    "css": [
+      "css/51-modern-default.css",
+      "css/config.css"
+    ],
+    "required_params": []
+  },
+  "homepage_url": {
+    "ja": "https://x.com/r3yamauchi",
+    "en": "https://x.com/r3yamauchi"
+  },
+  "name": {
+    "ja": "Difyチャット埋め込み",
+    "en": "Dify Chat Embed & Shortcut Toggle"
+  },
+  "description": {
+    "ja": "kintoneアプリにDifyチャットを埋め込みます。",
+    "en": "Embed Dify chat into kintone apps and configure keyboard shortcuts."
+  }
+}

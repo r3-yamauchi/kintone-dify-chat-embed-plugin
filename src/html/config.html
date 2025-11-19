@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Difyチャット埋め込み設定</title>
+</head>
+
+<body>
+  <div class="shortcut-config">
+    <header class="shortcut-config__header">
+      <div class="shortcut-config__header-inner">
+        <div class="shortcut-config__title-group">
+          <h1 class="shortcut-config__title">Difyチャット埋め込み設定</h1>
+          <p class="shortcut-config__lead">
+            kintoneアプリにDifyチャットボットを埋め込みます。<br>
+            また、誤操作防止のためにkintone標準のショートカットキーを無効化することもできます。
+          </p>
+        </div>
+        <div class="shortcut-config__actions">
+          <button type="button" id="plugin-submit"
+            class="shortcut-config__button shortcut-config__button--primary">保存</button>
+          <button type="button" id="plugin-cancel"
+            class="shortcut-config__button shortcut-config__button--secondary">キャンセル</button>
+        </div>
+      </div>
+    </header>
+    <main class="shortcut-config__main">
+      <section class="shortcut-config__section">
+        <div class="shortcut-config__input-group">
+          <label class="shortcut-config__label" for="dify-base-url">Dify Base URL</label>
+          <input type="text" id="dify-base-url" class="shortcut-config__input-text" placeholder="https://udify.app">
+        </div>
+        <div class="shortcut-config__row">
+          <div class="shortcut-config__col">
+            <div class="shortcut-config__input-group">
+              <label class="shortcut-config__label" for="dify-default-token">チャットのID(Token)</label>
+              <input type="text" id="dify-default-token" class="shortcut-config__input-text"
+                placeholder="Enter default API Token">
+            </div>
+          </div>
+          <div class="shortcut-config__col">
+            <div class="shortcut-config__input-group">
+              <label class="shortcut-config__label" for="dify-default-width">チャットの幅</label>
+              <input type="text" id="dify-default-width" class="shortcut-config__input-text" placeholder="e.g. 600px">
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="shortcut-config-screens" class="shortcut-config__screen-list"></div>
+    </main>
+  </div>
+</body>
+
+</html>
