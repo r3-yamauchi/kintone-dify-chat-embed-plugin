@@ -3,8 +3,12 @@
   "description": "kintone plugin to embed Dify chat and toggle keyboard shortcuts",
   "version": "0.1.0",
   "scripts": {
-    "build": "kintone-plugin-packer --ppk private.ppk --out dist/plugin.zip src",
-    "upload": "kintone-plugin-uploader dist/plugin.zip --watch --waiting-dialog-ms 3000"
+    "start": "node scripts/npm-start.js",
+    "upload": "cli-kintone plugin upload --input dist/plugin.zip --watch",
+    "develop": "npm run build -- --watch",
+    "keygen": "cli-kintone plugin keygen --output private.ppk",
+    "build": "cli-kintone plugin pack --private-key private.ppk --output dist/plugin.zip --input src/manifest.json",
+    "lint": "eslint ."
   },
   "keywords": [
     "kintone",
@@ -16,14 +20,16 @@
   ],
   "author": {
     "name": "r3-yamauchi",
-    "url": "https://x.com/r3yamauchi"
+    "url": "https://yamauchi.win"
   },
   "license": "MIT",
   "engines": {
     "node": ">=20"
   },
   "devDependencies": {
-    "@kintone/plugin-packer": "^9.0.0",
-    "@kintone/plugin-uploader": "^10.0.0"
+    "@cybozu/eslint-config": "^24.3.0",
+    "@kintone/cli": "^1.15.0",
+    "npm-run-all": "^4.1.5",
+    "eslint": "^9.39.1"
   }
 }
